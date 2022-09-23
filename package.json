@@ -1,0 +1,17 @@
+{
+  "name": "ecom-tastebuds-back-end",
+  "version": "1.0.0",
+  "description": "Client and Admin applications' APIs inclulded in this project.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "tastebuds-team",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
