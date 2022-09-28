@@ -51,17 +51,20 @@ outletRouter.get("/", async (req, res) => {
 // Get outlet details by outlet Id
 outletRouter.get("/:outletId", async (req, res) => {
   try {
-    let outlet = await outletModel.findById({ outletNo: parseInt(req.params.outletId)});
+    let outlet = await outletModel.find({
+      outletNo: parseInt(req.params.outletId),
+    });
 
-    if (outlet) {
-      res.status(200).send(outlet);
-    } else if (!outlet) {
-      return res
-        .status(404)
-        .send(
-          "NOT FOUND : The given Outlet Id does not match any ninjas on our system"
-        );
+    if (!outlet) {
+      let errorObj = {
+        message: "The given Outlet Id does not match any outlet on our system",
+        statusCode: "NOT FOUND",
+      };
+
+      return res.status(404).send(errorObj);
     }
+
+    res.status(200).send(outlet);
   } catch (err) {
     return res.status(500).send(`Error: ${err.message}`);
   }
