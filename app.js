@@ -5,17 +5,23 @@ const mongoose = require("mongoose");
 //Config .env
 dotenv.config();
 
-// Crete a Express Server
+// Crete a Express Framework
 const app = express();
 
 // Declare a PORT
-const PORT = process.env.APP_RUNNING_PORT;
+const PORT = process.env.APP_RUNNING_PORT || 3000;
+
+//Add Routes
+const outletRouter = require("./src/routes/outlet");
 
 // Add Middlewares
 app.use(express.json());
+app.use("/outlets", outletRouter);
 
-// APP ROUTES
-// app.use("/yyy/xx", testRoutes);
+// Check runing port
+app.listen(PORT, () => {
+  console.log(`Successfully runing on Port : ${PORT}`);
+});
 
 // Mongo DB Connections
 mongoose
@@ -25,8 +31,3 @@ mongoose
   })
   .then(() => console.log("Successfully connected to mongodb !"))
   .catch((err) => console.log(`Error has occured: ${err}`));
-
-// Check runing port
-app.listen(PORT, () => {
-  console.log(`Successfully runing on Port : ${PORT}`);
-});
