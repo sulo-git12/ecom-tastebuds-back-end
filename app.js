@@ -13,10 +13,12 @@ const PORT = process.env.APP_RUNNING_PORT || 3000;
 
 //Add Routes
 const outletRouter = require("./src/routes/outlet");
+const food_itemRouter = require("./src/routes/food_Item");
 
 // Add Middlewares
 app.use(express.json());
 app.use("/outlets", outletRouter);
+app.use("/foods", food_itemRouter);
 
 // Check runing port
 app.listen(PORT, () => {

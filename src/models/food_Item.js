@@ -14,27 +14,31 @@ const Food_price_field = mongoose.Schema(
   { _id: false }
 );
 
-const FoodItemSchema = mongoose.Schema({
+const foodItemSchema = new mongoose.Schema({
   outletNo: {
     type: Number,
     require: true,
   },
-  itmeNo: {
-    type: Number,
+  itemNo: {
+    type: String,
     require: true,
   },
   name: {
     type: String,
-    require: true,
+    required: true,
+    minlength: 5,
   },
   price: Food_price_field,
   description: {
     type: String,
+    minlength: 10,
     require: true,
   },
   rating: {
     type: Number,
-    require: true,
+    required: true,
+    min: 0,
+    max: 5,
   },
   imageUrl: {
     type: String,
@@ -50,4 +54,5 @@ const FoodItemSchema = mongoose.Schema({
     require: true,
   },
 });
-module.exports = mongoose.model("food_item", FoodItemSchema);
+const Food_item = mongoose.model("Food_item", foodItemSchema);
+module.exports = Food_item;
