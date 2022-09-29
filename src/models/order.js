@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const item_field = mongoose.Schema(
   {
     itmeNo: {
-      type: Number,
+      type: String,
       require: true,
     },
     price: {
@@ -30,7 +30,7 @@ const item_field = mongoose.Schema(
   { _id: false }
 );
 
-const OrderSchema = mongoose.Schema({
+const orderSchema = new mongoose.Schema({
   orderId: {
     type: Number,
     require: true,
@@ -61,4 +61,4 @@ const OrderSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("order", OrderSchema);
+module.exports = mongoose.model("Order", orderSchema);

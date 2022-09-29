@@ -18,7 +18,7 @@ const address_field = mongoose.Schema(
   { _id: false }
 );
 
-const UserSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   no: {
     type: Number,
     require: true,
@@ -58,4 +58,5 @@ const UserSchema = mongoose.Schema({
     require: true,
   },
 });
-module.exports = mongoose.model("user", UserSchema);
+const User = mongoose.model("User", userSchema);
+module.exports = User;
