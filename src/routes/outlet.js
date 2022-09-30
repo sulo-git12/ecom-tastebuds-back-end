@@ -51,9 +51,13 @@ outletRouter.get("/", async (req, res) => {
 // Get outlet details by outlet Id
 outletRouter.get("/:outletId", async (req, res) => {
   try {
+<<<<<<< HEAD
     let outlet = await outletModel.findOne({
       outletNo: req.params.outletId,
     });
+=======
+    let outlet = await outletModel.findById(req.params.outletId);
+>>>>>>> 7931c65 (Upated Outlet Model & Route)
 
     if (!outlet) {
       let errorObj = {
