@@ -17,8 +17,23 @@ const food_itemRouter = require("./src/routes/food_Item");
 
 // Add Middlewares
 app.use(express.json());
+<<<<<<< HEAD
 app.use("/outlets", outletRouter);
 app.use("/foods", food_itemRouter);
+=======
+
+// APP ROUTES
+// app.use("/yyy/xx", testRoutes);
+
+// Mongo DB Connections
+mongoose
+  .connect(process.env.MONGO_DB_CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Successfully connected to mongodb !"))
+  .catch((err) => console.log(`Error has occured: ${err}`));
+>>>>>>> b172ca198e628886ba74b4deb7ec51707bdd40ba
 
 // Check runing port
 app.listen(PORT, () => {
