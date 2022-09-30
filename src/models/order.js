@@ -1,64 +1,29 @@
 const mongoose = require("mongoose");
 
-const item_field = mongoose.Schema(
+// Item Field
+const itemField = mongoose.Schema(
   {
-    itmeNo: {
-      type: String,
-      require: true,
-    },
-    price: {
-      type: Number,
-      require: true,
-    },
-    qty: {
-      type: Number,
-      require: true,
-    },
-    grossAmount: {
-      type: Number,
-      require: true,
-    },
-    discountAmount: {
-      type: Number,
-      require: true,
-    },
-    netAmount: {
-      type: Number,
-      require: true,
-    },
+    itmeNo: { type: Number, required: true },
+    price: { type: Number, required: true },
+    qty: { type: Number, required: true, min: 1, max: 1000 },
+    grossAmount: { type: Number, required: true, min: 1 },
+    discountAmount: { type: Number, required: true },
+    netAmount: { type: Number, required: true, min: 1 },
   },
   { _id: false }
 );
 
 const orderSchema = new mongoose.Schema({
-  orderId: {
-    type: Number,
-    require: true,
-    index: true,
-    unique: true,
-  },
-  userNo: {
-    type: Number,
-    require: true,
-  },
-  outletNo: {
-    type: Number,
-    require: true,
-  },
-  item: [item_field],
-  totalAmount: {
-    type: String,
-    require: true,
-  },
-  payment_Method: {
-    type: String,
-    require: true,
-  },
-  createdDateTime: {
-    type: Date,
-    default: Date.now,
-    require: true,
-  },
+  orderId: { type: Number, required: true, unique: true, maxlength: 10 },
+  userNo: { type: Number, required: true },
+  outletNo: { type: Number, required: true },
+  item: itemField,
+  totalAmount: { type: Number, required: true, min: 1 },
+  payMethod: { type: String, required: true },
+  deliveryMethod: { type: String, required: true },
+  isActive: { type: Boolean, required: true, default: true },
+  createdDateTime: { type: Date, default: Date.now() },
 });
 
-module.exports = mongoose.model("Order", orderSchema);
+const Order = mongoose.model("Orders", orderSchema);
+module.exports = Order;
