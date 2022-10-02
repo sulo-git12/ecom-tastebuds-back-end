@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 //Config .env
 dotenv.config();
@@ -17,7 +18,9 @@ const food_itemRouter = require("./src/routes/food_Item");
 const orderRouter = require("./src/routes/order");
 
 // Add Middlewares
+app.use(cors());
 app.use(express.json());
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 app.use("/outlets", outletRouter);
@@ -41,6 +44,9 @@ app.use("/api/outlets", outletRouter);
 app.use("/foods", food_itemRouter);
 app.use("/api/orders", orderRouter);
 >>>>>>> 0d22a69 (Created Order Model and Route)
+=======
+app.use("/api/outlets", outletRouter);
+>>>>>>> 7931c65 (Upated Outlet Model & Route)
 
 // Check runing port
 app.listen(PORT, () => {
