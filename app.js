@@ -1,9 +1,13 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 //Config .env
 dotenv.config();
+
+//Logger Middelware
+const logger = require("./src/middlewares/logger");
 
 // Crete a Express Framework
 const app = express();
@@ -17,8 +21,10 @@ const food_itemRouter = require("./src/routes/food_Item");
 
 // Add Middlewares
 app.use(express.json());
-app.use("/outlets", outletRouter);
-app.use("/foods", food_itemRouter);
+app.use(cors());
+app.use(logger);
+app.use("/api/outlets", outletRouter);
+app.use("/api/foods", food_itemRouter);
 
 // Check runing port
 app.listen(PORT, () => {

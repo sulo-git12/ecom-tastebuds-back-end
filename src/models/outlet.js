@@ -34,7 +34,7 @@ const outletSchema = new mongoose.Schema({
   address: addressField,
   location: locationField,
   opening: openingField,
-  type: { type: String, required: true, maxlength: 100 },
+  type: { type: Array, required: true, default: [] },
   rating: { type: Number, required: true, min: 0, max: 5 },
   contactNo: { type: String, required: true, minlength: 10, maxlength: 10 },
   email: { type: String, required: true, unique: true },

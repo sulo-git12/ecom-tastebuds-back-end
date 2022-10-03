@@ -34,7 +34,7 @@ food_itemRouter.get("/:foodId", async (req, res) => {
   }
 });
 
-///Insert food item
+//Insert food item
 food_itemRouter.post("/", async (req, res) => {
   try {
     const food = new food_itemModel({
