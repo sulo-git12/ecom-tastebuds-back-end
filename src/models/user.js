@@ -19,9 +19,10 @@ const address_field = mongoose.Schema(
 );
 
 const userSchema = new mongoose.Schema({
-  no: {
-    type: Number,
+  userNo: {
+    type: String,
     require: true,
+    unique: true,
   },
   first_name: {
     type: String,
@@ -35,10 +36,12 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     require: true,
+    unique: true,
   },
   username: {
     type: String,
     require: true,
+    unique: true,
   },
   password: {
     type: String,
