@@ -18,15 +18,15 @@ const PORT = process.env.APP_RUNNING_PORT || 3000;
 //Add Routes
 const foodOutletRouter = require("./src/routes/foodOutlet");
 const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
-const food_itemRouter = require("./src/routes/food_Item");
+const foodItemRouter = require("./src/routes/foodItem");
 
 // Add Middlewares
 app.use(cors());
 app.use(express.json());
 app.use(logger);
-app.use("/api/food_api/outlets", foodOutletRouter);
-app.use("/api/favourite_api/food_outlets", favFoodOutletRouter);
-app.use("/api/foods", food_itemRouter);
+app.use("/api/food_outlets", foodOutletRouter);
+app.use("/api/favourite_food_outlets", favFoodOutletRouter);
+app.use("/api/foods", foodItemRouter);
 // Check runing port
 app.listen(PORT, () => {
   console.log(`Successfully runing on Port : ${PORT}`);
