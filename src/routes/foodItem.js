@@ -1,11 +1,11 @@
 const express = require("express");
-const food_itemRouter = express.Router();
-const food_itemModel = require("../models/food_Item");
+const foodItemRouter = express.Router();
+const foodItemModel = require("../models/foodItem");
 
 //Get all food items
-food_itemRouter.get("/", async (req, res) => {
+foodItemRouter.get("/", async (req, res) => {
   try {
-    let food_items = await food_itemModel.find();
+    let food_items = await foodItemModel.find();
 
     res.status(200).send(food_items);
   } catch (err) {
@@ -14,9 +14,9 @@ food_itemRouter.get("/", async (req, res) => {
 });
 
 // Get food item details by Item Id
-food_itemRouter.get("/:foodId", async (req, res) => {
+foodItemRouter.get("/:foodId", async (req, res) => {
   try {
-    let food = await food_itemModel.findOne({
+    let food = await foodItemModel.findOne({
       itemNo: req.params.foodId,
     });
 
@@ -35,9 +35,9 @@ food_itemRouter.get("/:foodId", async (req, res) => {
 });
 
 //Insert food item
-food_itemRouter.post("/", async (req, res) => {
+foodItemRouter.post("/", async (req, res) => {
   try {
-    const food = new food_itemModel({
+    const food = new foodItemModel({
       outletNo: req.body.outletNo,
       itemNo: req.body.itemNo,
       name: req.body.name,
@@ -60,9 +60,9 @@ food_itemRouter.post("/", async (req, res) => {
 });
 
 //update food item details by Item Id
-food_itemRouter.put("/:foodId", async (req, res) => {
+foodItemRouter.put("/:foodId", async (req, res) => {
   try {
-    let food = await food_itemModel.findOne({
+    let food = await foodItemModel.findOne({
       itemNo: req.params.foodId,
     });
     if (!food) {
@@ -104,15 +104,15 @@ food_itemRouter.put("/:foodId", async (req, res) => {
   }
 });
 // Delete food item details by item Id
-food_itemRouter.delete("/:foodId", async (req, res) => {
-  let food = await food_itemModel.findOne({
+foodItemRouter.delete("/:foodId", async (req, res) => {
+  let food = await foodItemModel.findOne({
     itemNo: req.params.foodId,
   });
   if (!food) {
     return res.status(404).send("Invalid food ID");
   }
   try {
-    const deleteFood = await food_itemModel.deleteOne({
+    const deleteFood = await foodItemModel.deleteOne({
       itemNo: req.params.foodId,
     });
     //res.status(200).json(deleteFood);
@@ -122,4 +122,4 @@ food_itemRouter.delete("/:foodId", async (req, res) => {
   }
 });
 
-module.exports = food_itemRouter;
+module.exports = foodItemRouter;
