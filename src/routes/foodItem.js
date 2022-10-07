@@ -103,6 +103,7 @@ foodItemRouter.put("/:foodId", async (req, res) => {
     return res.status(500).send(`Error: ${ex.message}`);
   }
 });
+
 // Delete food item details by item Id
 foodItemRouter.delete("/:foodId", async (req, res) => {
   let food = await foodItemModel.findOne({
