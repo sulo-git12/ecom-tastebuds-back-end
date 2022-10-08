@@ -16,7 +16,7 @@ const PORT = process.env.APP_RUNNING_PORT || 3000;
 const foodOutletRouter = require("./src/routes/foodOutlet");
 const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
 const MyOrderRouter = require("./src/routes/order");
-const MyOrderItemRouter = require("./src/routes/order");
+const MyOrderItemRouter = require("./src/routes/orderItem");
 
 // Add Middlewares
 app.use(cors());
