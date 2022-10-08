@@ -47,10 +47,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  favouriteOutletId: {
-    type: [String],
-    require: false,
-  },
   imageUrl: {
     type: String,
     require: true,
