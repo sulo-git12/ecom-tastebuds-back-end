@@ -12,9 +12,5 @@ const orderSchema = new mongoose.Schema({
   createdDateTime: { type: Date, default: Date.now() },
 });
 
-<<<<<<< HEAD
-const Order = mongoose.model("Order", orderSchema);
-=======
 const Order = mongoose.model("orders", orderSchema);
->>>>>>> 84c557b (Modifications of Order model and route)
 module.exports = Order;
