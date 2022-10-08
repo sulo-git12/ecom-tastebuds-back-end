@@ -15,7 +15,11 @@
     "nodemon": "^2.0.20"
   },
   "dependencies": {
+<<<<<<< HEAD
     "chalk": "^4.1.2",
+=======
+    "async": "3.2.4",
+>>>>>>> 743bbc2 (Add package async)
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
