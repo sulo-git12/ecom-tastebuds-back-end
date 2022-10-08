@@ -16,6 +16,7 @@ const PORT = process.env.APP_RUNNING_PORT || 3000;
 const foodOutletRouter = require("./src/routes/foodOutlet");
 const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
 const MyOrderRouter = require("./src/routes/order");
+const MyOrderItemRouter = require("./src/routes/order");
 
 // Add Middlewares
 app.use(cors());
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use("/api/food_outlets", foodOutletRouter);
 app.use("/api/favourite_food_outlets", favFoodOutletRouter);
 app.use("/api/my_orders", MyOrderRouter);
+app.use("/api/my_order_items", MyOrderItemRouter);
 
 // Check runing port
 app.listen(PORT, () => {
