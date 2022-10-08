@@ -1,7 +1,6 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
 
 //Config .env
 dotenv.config();
@@ -16,17 +15,36 @@ const app = express();
 const PORT = process.env.APP_RUNNING_PORT || 3000;
 
 //Add Routes
-const foodOutletRouter = require("./src/routes/foodOutlet");
-const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
-const foodItemRouter = require("./src/routes/foodItem");
+const outletRouter = require("./src/routes/outlet");
+const food_itemRouter = require("./src/routes/food_Item");
+const orderRouter = require("./src/routes/order");
 
 // Add Middlewares
-app.use(cors());
 app.use(express.json());
-app.use(logger);
-app.use("/api/food_outlets", foodOutletRouter);
-app.use("/api/favourite_food_outlets", favFoodOutletRouter);
-app.use("/api/foods", foodItemRouter);
+<<<<<<< HEAD
+<<<<<<< HEAD
+app.use("/outlets", outletRouter);
+app.use("/foods", food_itemRouter);
+=======
+
+// APP ROUTES
+// app.use("/yyy/xx", testRoutes);
+
+// Mongo DB Connections
+mongoose
+  .connect(process.env.MONGO_DB_CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Successfully connected to mongodb !"))
+  .catch((err) => console.log(`Error has occured: ${err}`));
+>>>>>>> b172ca198e628886ba74b4deb7ec51707bdd40ba
+=======
+app.use("/api/outlets", outletRouter);
+app.use("/foods", food_itemRouter);
+app.use("/api/orders", orderRouter);
+>>>>>>> 0d22a69 (Created Order Model and Route)
+
 // Check runing port
 app.listen(PORT, () => {
   console.log(`Successfully runing on Port : ${PORT}`);
