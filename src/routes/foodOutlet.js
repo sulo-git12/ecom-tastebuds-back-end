@@ -58,7 +58,8 @@ foodOutletRouter.get("/:outletId", async (req, res) => {
 
     if (!foodOutlet) {
       let errorObj = {
-        message: "The given Outlet Id does not match any outlet on our system",
+        message:
+          "The given food outlet Id does not match any food outlet on our system",
         statusCode: "NOT FOUND",
       };
 
