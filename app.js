@@ -14,6 +14,7 @@ const PORT = process.env.APP_RUNNING_PORT || 3000;
 
 //Add Routes
 const foodOutletRouter = require("./src/routes/foodOutlet");
+const foodItemRouter = require("./src/routes/foodItem");
 const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
 const MyOrderRouter = require("./src/routes/order");
 const MyOrderItemRouter = require("./src/routes/orderItem");
@@ -22,6 +23,7 @@ const MyOrderItemRouter = require("./src/routes/orderItem");
 app.use(cors());
 app.use(express.json());
 app.use("/api/food_outlets", foodOutletRouter);
+app.use("/api/food_items", foodItemRouter);
 app.use("/api/favourite_food_outlets", favFoodOutletRouter);
 app.use("/api/my_orders", MyOrderRouter);
 app.use("/api/my_order_items", MyOrderItemRouter);
