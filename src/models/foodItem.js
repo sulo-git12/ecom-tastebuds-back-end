@@ -22,6 +22,8 @@ const foodItemSchema = new mongoose.Schema({
   itemNo: {
     type: String,
     require: true,
+    unique: true,
+    maxlength: 10,
   },
   name: {
     type: String,
@@ -47,6 +49,7 @@ const foodItemSchema = new mongoose.Schema({
   isActive: {
     type: Boolean,
     require: true,
+    default: true,
   },
   createdDateTime: {
     type: Date,
@@ -54,5 +57,5 @@ const foodItemSchema = new mongoose.Schema({
     require: true,
   },
 });
-const Food_item = mongoose.model("Food_item", foodItemSchema);
-module.exports = Food_item;
+const foodItem = mongoose.model("Food_item", foodItemSchema);
+module.exports = foodItem;

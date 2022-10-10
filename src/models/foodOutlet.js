@@ -28,13 +28,13 @@ const openingField = mongoose.Schema(
   { _id: false }
 );
 
-const outletSchema = new mongoose.Schema({
+const foodOutletSchema = new mongoose.Schema({
   outletNo: { type: String, required: true, unique: true, maxlength: 10 },
   name: { type: String, required: true, minlength: 5 },
   address: addressField,
   location: locationField,
   opening: openingField,
-  type: { type: String, required: true, maxlength: 100 },
+  type: { type: Array, required: true, default: [] },
   rating: { type: Number, required: true, min: 0, max: 5 },
   contactNo: { type: String, required: true, minlength: 10, maxlength: 10 },
   email: { type: String, required: true, unique: true },
@@ -45,11 +45,6 @@ const outletSchema = new mongoose.Schema({
 });
 
 // Create an instance of model Outlet
-const Outlet = mongoose.model("Outlet", outletSchema);
-
-// // Save the new model Outlet, passing a callback
-// Outlet.save((err) => {
-//   if (err) return handleError(err);
-// });
+const Outlet = mongoose.model("food_outlet", foodOutletSchema);
 
 module.exports = Outlet;

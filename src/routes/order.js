@@ -2,24 +2,17 @@ const express = require("express");
 const orderRouter = express.Router();
 const orderModel = require("../models/order");
 
-// Insert order details
+// Insert data
 orderRouter.post("/", async (req, res) => {
   try {
     const order = new orderModel({
       orderId: req.body.orderId,
       userNo: req.body.userNo,
       outletNo: req.body.outletNo,
-      item: {
-        itmeNo: req.body.item.itmeNo,
-        price: req.body.item.price,
-        qty: req.body.item.qty,
-        grossAmount: req.body.item.grossAmount,
-        discountAmount: req.body.item.discountAmount,
-        netAmount: req.body.item.netAmount,
-      },
       totalAmount: req.body.totalAmount,
       payMethod: req.body.payMethod,
       deliveryMethod: req.body.deliveryMethod,
+      status: req.body.status,
     });
 
     const newOrder = await order.save();
@@ -29,10 +22,47 @@ orderRouter.post("/", async (req, res) => {
   }
 });
 
-// Get all orders details
-orderRouter.get("/", async (req, res) => {
+//Get data by user id
+orderRouter.get("/:userId", async (req, res) => {
   try {
-    let orders = await orderModel.find();
+    // let orders = await orderModel.find();
+
+    let orders = await orderModel.aggregate([
+      {
+        $lookup: {
+          from: "food_outlets",
+          localField: "outletNo",
+          foreignField: "outletNo",
+          as: "OutletData",
+        },
+      },
+      {
+        $project: {
+          _id: 1,
+          orderId: 1,
+          userNo: 1,
+          totalAmount: 1,
+          payMethod: 1,
+          deliveryMethod: 1,
+          status: 1,
+          createdDateTime: 1,
+          "OutletData.name": 1,
+        },
+      },
+      {
+        $unwind: "$OutletData",
+      },
+      { $match: { userNo: req.params.userId } },
+    ]);
+
+    if (!orders) {
+      let error = {
+        message: "No orders in this user",
+        statusCode: "NOT FOUND",
+      };
+
+      return res.status(404).send(error);
+    }
 
     res.status(200).send(orders);
   } catch (err) {
@@ -40,33 +70,10 @@ orderRouter.get("/", async (req, res) => {
   }
 });
 
-// Get order details by order Id
-orderRouter.get("/:orderId", async (req, res) => {
-
-
-  try {
-    let order = await orderModel.findOne({
-      orderId: parseInt(req.params.orderId)
-    }); 
-    if (!order) {
-      let errorObj = {
-        message: "The given order Id does not match any order on our system",
-        statusCode: "NOT FOUND",
-      };
-
-      return res.status(404).send(errorObj);
-    }
-
-    res.status(200).send(order);
-  } catch (err) {
-    return res.status(500).send(`Error: ${err.message}`);
-  }
-});
-
-orderRouter.delete("/", async (req, res) => {
-  let order = await orderModel.findOneAndDelete({ orderId: req.body.orderId });
+//Delete data
+orderRouter.delete("/:orderId", async (req, res) => {
+  let order = await orderModel.findOneAndDelete({ orderId:  req.params.orderId });
   res.send(order);
 });
-
 
 module.exports = orderRouter;

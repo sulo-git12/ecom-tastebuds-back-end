@@ -1,0 +1,95 @@
+Date and Time : 2022-10-3 20:35:42 - Method & URL : GET:/api/ - Status : 200  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.087ms
+Date and Time : 2022-10-3 20:38:29 - Method & URL : GET:/api/ - Status : [object Object]  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.033ms
+Date and Time : 2022-10-3 20:40:54 - Method & URL : GET:/api/ - Status :   - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.049ms
+Date and Time : 2022-10-3 20:42:1 - Method & URL : GET:/api/ - Status :   - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.028ms
+Date and Time : 2022-10-3 20:42:35 - Method & URL : GET:/api/ - Status : Non  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.029ms
+Date and Time : 2022-10-3 20:43:16 - Method & URL : GET:/api/ - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.04ms
+Date and Time : 2022-10-3 20:43:36 - Method & URL : GET:/api/ - Status : Non  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.029ms
+Date and Time : 2022-10-3 20:43:56 - Method & URL : GET:/api/ - Status : Non  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.067ms
+Date and Time : 2022-10-3 20:50:9 - Method & URL : GET:/api/ - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.033ms
+Date and Time : 2022-10-3 20:50:17 - Method & URL : GET:/api/foods - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 20:51:6 - Method & URL : GET:/api/foods/1 - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.005ms
+Date and Time : 2022-10-3 20:51:40 - Method & URL : GET:/api/foods/ - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.034ms
+Date and Time : 2022-10-3 20:52:8 - Method & URL : GET:/api/foods/3 - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-3 21:5:48 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.096ms
+Date and Time : 2022-10-3 21:22:59 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-3 21:22:59 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 21:23:38 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 21:23:38 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::1 - OS : Windows - Duration:0.02ms
+Date and Time : 2022-10-3 21:24:14 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:4:32 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-3 22:4:32 - Method & URL : GET:/api/outlets - Status : Good  - IP Address : ::1 - OS : Windows - Duration:0.006ms
+Date and Time : 2022-10-3 22:11:19 - Method & URL : GET:/api/foods - Status : Good  - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:20:15 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.114ms
+Date and Time : 2022-10-3 22:20:16 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:20:36 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.051ms
+Date and Time : 2022-10-3 22:20:39 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-3 22:22:22 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.04ms
+Date and Time : 2022-10-3 22:22:22 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:22:47 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.054ms
+Date and Time : 2022-10-3 22:22:48 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:24:1 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.04ms
+Date and Time : 2022-10-3 22:24:1 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:24:16 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.044ms
+Date and Time : 2022-10-3 22:24:16 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-3 22:26:12 - Method & URL : GET:/foods - IP Address : ::1 - OS : Windows - Duration:0.034ms
+Date and Time : 2022-10-3 22:26:35 - Method & URL : GET:/api/foods - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-3 22:28:25 - Method & URL : POST:/foods - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:28:40 - Method & URL : POST:/api/foods - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:38:30 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.042ms
+Date and Time : 2022-10-3 22:38:30 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-3 22:38:45 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:38:45 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-3 22:41:4 - Method & URL : GET:/api/outlets - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-3 22:43:26 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.052ms
+Date and Time : 2022-10-3 22:43:26 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 15:50:38 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.046ms
+Date and Time : 2022-10-5 15:50:38 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 15:51:2 - Method & URL : GET:/api/outlets/6335d94791ea97c87af4cfc6 - IP Address : ::1 - OS : Windows - Duration:0.006ms
+Date and Time : 2022-10-5 15:51:2 - Method & URL : GET:/api/outlets/6335d94791ea97c87af4cfc6 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-5 15:51:8 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.011ms
+Date and Time : 2022-10-5 15:51:8 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.005ms
+Date and Time : 2022-10-5 15:52:16 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 15:52:16 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 15:52:24 - Method & URL : GET:/foods - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 15:52:29 - Method & URL : GET:/foods - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 15:52:38 - Method & URL : GET:/outlets - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-5 15:53:4 - Method & URL : GET:/api/outlets - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.001ms
+Date and Time : 2022-10-5 15:53:20 - Method & URL : GET:/api/Outlets - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 15:53:27 - Method & URL : GET:/api/foods - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 15:54:43 - Method & URL : GET:/api/food_api/outlets - IP Address : ::ffff:127.0.0.1 - OS : Windows - Duration:0.001ms
+Date and Time : 2022-10-5 16:7:28 - Method & URL : GET:/api/outlets/6335d94791ea97c87af4cfc6 - IP Address : ::1 - OS : Windows - Duration:0.085ms
+Date and Time : 2022-10-5 16:7:28 - Method & URL : GET:/api/outlets/6335d94791ea97c87af4cfc6 - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 16:7:32 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-5 16:7:32 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-5 16:7:42 - Method & URL : GET:/api/outlets/4 - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 16:7:42 - Method & URL : GET:/api/outlets/4 - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 16:7:47 - Method & URL : GET:/api/outlets/5 - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 16:7:47 - Method & URL : GET:/api/outlets/5 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-5 17:55:48 - Method & URL : GET:/api/food_outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.032ms
+Date and Time : 2022-10-5 17:56:4 - Method & URL : GET:/api/food_outlets/2 - IP Address : ::1 - OS : Windows - Duration:0.006ms
+Date and Time : 2022-10-5 17:56:30 - Method & URL : GET:/api/favourite_food_outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 17:56:38 - Method & URL : GET:/api/favourite_food_outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 17:56:49 - Method & URL : GET:/api/foods - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:26:34 - Method & URL : GET:/api/food_outlets/6335d94791ea97c87af4cfc6 - IP Address : ::1 - OS : Windows - Duration:0.035ms
+Date and Time : 2022-10-5 18:26:34 - Method & URL : GET:/api/food_outlets/6335d94791ea97c87af4cfc6 - IP Address : ::1 - OS : Windows - Duration:0.005ms
+Date and Time : 2022-10-5 18:26:41 - Method & URL : GET:/api/food_outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:26:41 - Method & URL : GET:/api/food_outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.005ms
+Date and Time : 2022-10-5 18:27:1 - Method & URL : GET:/api/food_outlets/5 - IP Address : ::1 - OS : Windows - Duration:0.004ms
+Date and Time : 2022-10-5 18:27:1 - Method & URL : GET:/api/food_outlets/5 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-5 18:27:5 - Method & URL : GET:/api/food_outlets/4 - IP Address : ::1 - OS : Windows - Duration:0.005ms
+Date and Time : 2022-10-5 18:27:5 - Method & URL : GET:/api/food_outlets/4 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:27:8 - Method & URL : GET:/api/food_outlets/3 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:27:9 - Method & URL : GET:/api/food_outlets/3 - IP Address : ::1 - OS : Windows - Duration:0.005ms
+Date and Time : 2022-10-5 18:32:21 - Method & URL : GET:/api/food_outlets/3 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:32:59 - Method & URL : GET:/api/food_outlets/3 - IP Address : ::1 - OS : Windows - Duration:0.001ms
+Date and Time : 2022-10-5 18:33:3 - Method & URL : GET:/api/food_outlets/3 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:36:37 - Method & URL : GET:/api/food_outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:36:37 - Method & URL : GET:/api/food_outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.016ms
+Date and Time : 2022-10-5 18:36:49 - Method & URL : GET:/api/food_outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:39:11 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.001ms
+Date and Time : 2022-10-5 18:39:44 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 18:39:48 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.001ms
+Date and Time : 2022-10-5 18:39:55 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-5 19:44:0 - Method & URL : GET:/api/foods - IP Address : ::1 - OS : Windows - Duration:0.095ms
+Date and Time : 2022-10-5 19:44:12 - Method & URL : GET:/api/foods/2 - IP Address : ::1 - OS : Windows - Duration:0.005ms
