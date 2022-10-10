@@ -72,7 +72,9 @@ orderRouter.get("/:userId", async (req, res) => {
 
 //Delete data
 orderRouter.delete("/:orderId", async (req, res) => {
-  let order = await orderModel.findOneAndDelete({ orderId:  req.params.orderId });
+  let order = await orderModel.findOneAndDelete({
+    orderId: req.params.orderId,
+  });
   res.send(order);
 });
 
