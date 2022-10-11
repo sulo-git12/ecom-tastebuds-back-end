@@ -23,10 +23,10 @@ const MyOrderItemRouter = require("./src/routes/orderItem");
 app.use(cors());
 app.use(express.json());
 app.use("/api/outlets", foodOutletRouter);
-app.use("/api/food_items", foodItemRouter);
+app.use("/api/foods", foodItemRouter);
 app.use("/api/favorites", favFoodOutletRouter);
-app.use("/api/my_orders", MyOrderRouter);
-app.use("/api/my_order_items", MyOrderItemRouter);
+app.use("/api/orders", MyOrderRouter);
+app.use("/api/orders/items", MyOrderItemRouter);
 
 // Check runing port
 app.listen(PORT, () => {
