@@ -2157,3 +2157,11 @@ Date and Time : 2022-10-11 12:8:43 - Method & URL : GET:/api/outlets - IP Addres
 Date and Time : 2022-10-11 12:8:43 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
 Date and Time : 2022-10-11 12:8:53 - Method & URL : GET:/api/outlets1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
 Date and Time : 2022-10-11 12:8:53 - Method & URL : GET:/api/outlets1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-11 12:27:11 - Method & URL : GET:/api/outlets1 - IP Address : ::1 - OS : Windows - Duration:0.038ms
+Date and Time : 2022-10-11 12:27:11 - Method & URL : GET:/api/outlets1 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-11 12:27:17 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-11 12:27:17 - Method & URL : GET:/api/outlets - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-11 12:27:19 - Method & URL : GET:/api/foods/store/1 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-11 12:27:19 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.003ms
+Date and Time : 2022-10-11 12:27:19 - Method & URL : GET:/api/foods/store/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms
+Date and Time : 2022-10-11 12:27:19 - Method & URL : GET:/api/outlets/1 - IP Address : ::1 - OS : Windows - Duration:0.002ms

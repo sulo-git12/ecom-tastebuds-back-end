@@ -19,6 +19,9 @@ const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
 const MyOrderRouter = require("./src/routes/order");
 const MyOrderItemRouter = require("./src/routes/orderItem");
 
+//Add Middleware Path
+const logger = require("./src/middlewares/logger");
+
 // Add Middlewares
 app.use(cors());
 app.use(express.json());
