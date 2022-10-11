@@ -24,7 +24,7 @@ const foodItemRouter = require("./src/routes/foodItem");
 app.use(cors());
 app.use(express.json());
 app.use(logger);
-app.use("/api/food_outlets", foodOutletRouter);
+app.use("/api/outlets", foodOutletRouter);
 app.use("/api/favourite_food_outlets", favFoodOutletRouter);
 app.use("/api/foods", foodItemRouter);
 // Check runing port
