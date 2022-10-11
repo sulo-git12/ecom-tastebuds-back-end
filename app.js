@@ -22,9 +22,9 @@ const MyOrderItemRouter = require("./src/routes/orderItem");
 // Add Middlewares
 app.use(cors());
 app.use(express.json());
-app.use("/api/food_outlets", foodOutletRouter);
+app.use("/api/outlets", foodOutletRouter);
 app.use("/api/food_items", foodItemRouter);
-app.use("/api/favourite_food_outlets", favFoodOutletRouter);
+app.use("/api/favorites", favFoodOutletRouter);
 app.use("/api/my_orders", MyOrderRouter);
 app.use("/api/my_order_items", MyOrderItemRouter);
 
