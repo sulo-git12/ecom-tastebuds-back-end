@@ -33,12 +33,10 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 app.use("/api/outlets", foodOutletRouter);
-app.use("/api/foods", foodItemRouter);
+app.use("/api/food_items", foodItemRouter);
 app.use("/api/favorites", favFoodOutletRouter);
-app.use("/api/orders", MyOrderRouter);
-app.use("/api/orders/items", MyOrderItemRouter);
-app.use("/api/users", UserManageRouter);
-app.use("/api/s3Server", imageServerRoute);
+app.use("/api/my_orders", MyOrderRouter);
+app.use("/api/my_order_items", MyOrderItemRouter);
 
 // Check runing port
 app.listen(PORT, () => {
