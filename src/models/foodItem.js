@@ -16,7 +16,7 @@ const Food_price_field = mongoose.Schema(
 
 const foodItemSchema = new mongoose.Schema({
   outletNo: {
-    type: Number,
+    type: String,
     require: true,
   },
   itemNo: {
