@@ -33,7 +33,6 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 app.use("/api/outlets", foodOutletRouter);
-app.use("/api/favorites", favFoodOutletRouter);
 app.use("/api/foods", foodItemRouter);
 app.use("/api/orders", MyOrderRouter);
 app.use("/api/orders/items", MyOrderItemRouter);
