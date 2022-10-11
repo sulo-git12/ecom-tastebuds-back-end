@@ -33,34 +33,10 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 app.use("/api/outlets", foodOutletRouter);
-app.use("/api/foods", foodItemRouter);
-app.use("/api/orders", MyOrderRouter);
-app.use("/api/orders/items", MyOrderItemRouter);
-app.use("/api/users", UserManageRouter);
-app.use("/api/s3Server", imageServerRoute);
-
-const swaggerDefinition = {
-  info: {
-    title: "TasteBuds Food Delivery System APIs",
-    version: "1.0.0",
-  },
-  host: "localhost:8088",
-  basePath: "/",
-};
-
-// Options for swagger documentations
-const options = {
-  swaggerDefinition,
-  apis: ["./docs/**/*.yaml"],
-};
-// Initialize the swagger documentations
-const swaggerSpec = swaggerJsDoc(options);
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
-
-app.use("/api/s3Server", imageServerRoute);
+app.use("/api/food_items", foodItemRouter);
 app.use("/api/favorites", favFoodOutletRouter);
-app.use("/api/orders", MyOrderRouter);
-app.use("/api/orders/items", MyOrderItemRouter);
+app.use("/api/my_orders", MyOrderRouter);
+app.use("/api/my_order_items", MyOrderItemRouter);
 
 // Check runing port
 app.listen(PORT, () => {
