@@ -1,0 +1,141 @@
+paths:
+  /api/outlets:
+    post:
+      description: create a new food outlet
+      tags:
+        - food outlet
+      parameters:
+        - name: foodOutlet
+          in: body
+          description: Insert food outlet details
+          required: true
+          schema:
+            $ref: "#/definitions/foodOutlet"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food outlet details
+
+    get:
+      description: Get food outlet details
+      tags:
+        - food outlet
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food outlet details
+
+  /api/outlets/{outletId}:
+    get:
+      description: Get food outlet details
+      tags:
+        - food outlet
+      parameters:
+        - name: outletId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food outlet details
+
+    put:
+      description: update food outlet details
+      tags:
+        - food outlet
+      parameters:
+        - name: outletId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food outlet details
+
+    delete:
+      description: food outlet
+      tags:
+        - food outlet
+      parameters:
+        - name: outletId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: ========
+
+definitions:
+  foodOutlet:
+    description: new food outlet object
+    properties:
+      outletNo:
+        type: string
+      name:
+        type: string
+      address:
+        type: array
+        items:
+          type: object
+          properties:
+            no:
+              type: string
+            city:
+              type: string
+            street:
+              type: string
+      location:
+        type: array
+        items:
+          type: object
+          properties:
+            longitude:
+              type: double
+            latitude:
+              type: double
+      opening:
+        type: array
+        items:
+          type: object
+          properties:
+            hours:
+             type: string
+            days:
+             type: string
+      type:
+        type: array
+        items:
+          type: object
+          properties:
+            0:
+             type: string
+            1:
+             type: string  
+      rating:
+        type: string
+      contactNo:
+        type: number
+      email:
+        type: string
+      description:
+        type: string
+      imageUrl:
+        type: string
+    required:
+      - address
+      - location
+      - opening
+      - type
+      - rating
+      - contactNo
+      - email
+      - description
+      - imageUrl

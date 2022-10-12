@@ -1,5 +1,7 @@
 const dotenv = require("dotenv");
 const express = require("express");
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUI = require("swagger-ui-express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
@@ -18,6 +20,7 @@ const foodItemRouter = require("./src/routes/foodItem");
 const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
 const MyOrderRouter = require("./src/routes/order");
 const MyOrderItemRouter = require("./src/routes/orderItem");
+const UserManageRouter = require("./src/routes/userManage");
 
 //Add Middleware Path
 const logger = require("./src/middlewares/logger");
@@ -29,8 +32,28 @@ app.use(logger);
 app.use("/api/outlets", foodOutletRouter);
 app.use("/api/favorites", favFoodOutletRouter);
 app.use("/api/foods", foodItemRouter);
-app.use("/api/my_orders", MyOrderRouter);
-app.use("/api/my_order_items", MyOrderItemRouter);
+app.use("/api/orders", MyOrderRouter);
+app.use("/api/orders/items", MyOrderItemRouter);
+app.use("/api/users", UserManageRouter);
+
+const swaggerDefinition = {
+  info: {
+    title: "TasteBuds Food Delivery System APIs",
+    version: "1.0.0",
+  },
+  host: "localhost:8088",
+  basePath: "/",
+};
+
+// Options for swagger documentations
+const options = {
+  swaggerDefinition,
+  apis: ["./docs/**/*.yaml"],
+};
+// Initialize the swagger documentations
+const swaggerSpec = swaggerJsDoc(options);
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
+
 // Check runing port
 app.listen(PORT, () => {
   console.log(`Successfully runing on Port : ${PORT}`);

@@ -1,0 +1,72 @@
+paths:
+  /api/orders:
+    post:
+      description: create a new order
+      tags:
+        - orders
+      parameters:
+        - name: orders
+          in: body
+          description: orders object
+          required: true
+          schema:
+            $ref: "#/definitions/NewOrder"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with Order details
+
+  /api/orders/{userId}:
+    get:
+      description: Get orders according to userID
+      tags:
+        - orders
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with orders details according to userID
+
+  /api/orders/{orderId}:
+      delete:
+        description: delete order
+        tags:
+          - orders
+        parameters:
+          - name: orderId
+            in: path
+            required: true
+            type: string
+        produces:
+          - application/json
+        responses:
+          200:
+            description: ========
+
+definitions:
+  NewOrder:
+    description: new order object
+    properties:
+      orderId:
+        type: string
+      userNo:
+        type: string
+      outletNo:
+        type: string
+      totalAmount:
+        type: number
+      payMethod:
+        type: string
+      deliveryMethod:
+        type: string
+      status:
+        type: string
+    required:
+      - orderId
+      - userNo

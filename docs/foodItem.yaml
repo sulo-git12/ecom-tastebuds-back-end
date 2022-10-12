@@ -1,0 +1,128 @@
+paths:
+  /api/foods:
+    post:
+      description: Insert food item
+      tags:
+        - food items
+      parameters:
+        - name: food items
+          in: body
+          description: food item object
+          required: true
+          schema:
+            $ref: "#/definitions/fooditems"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food items
+
+    get:
+      description: Get Get all food items
+      tags:
+        - food items
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with order details according to userID
+
+  /api/foods/{foodId}:
+    get:
+      description: Get Get all food items by foodId
+      tags:
+        - food items
+      parameters:
+        - name: foodId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food items according to foodId
+
+  /api/store/{outeltId}:
+    get:
+      description: Get food items by outlet Id
+      tags:
+        - food items
+      parameters:
+        - name: outeltId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food items by outlet Id
+
+  /api/{foodId}:
+    put:
+      description: update food item details by foodId
+      tags:
+        - food items
+      parameters:
+        - name: foodId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with food item details by foodId
+
+    delete:
+      description: delete food items 
+      tags:
+        - food items
+      parameters:
+        - name: foodId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: ========
+
+definitions:
+  fooditems :
+    description: new order object
+    properties:
+      outletNo:
+        type: string
+      name:
+        type: string
+      price:
+        type: array
+        items:
+          type: object
+          properties:
+            price:
+              type: number
+            discount:
+              type: number
+      description:
+        type: string
+      rating:
+        type: number
+      imageUrl:
+        type: string
+    required:
+      - outletNo
+      - name
+      - price
+      - description
+      - rating
+      - imageUrl
+
