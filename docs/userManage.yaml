@@ -1,0 +1,120 @@
+paths:
+  /api/users:
+    post:
+      description: Insert New User Details
+      tags:
+        - users
+      parameters:
+        - name: user
+          in: body
+          description: user Item object
+          required: true
+          schema:
+            $ref: "#/definitions/users"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with user user details
+
+    get:
+      description: Get all users details
+      tags:
+        - users
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with user details
+
+    delete:
+      description: delete user details
+      tags:
+        - users
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with user details
+
+  /api/users/{userNo}:
+    get:
+      description: Get user details by user No
+      tags:
+        - users
+      parameters:
+        - name: userNo
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with user details according to userNo
+
+    put:
+      description: update User Details by User No
+      tags:
+        - users
+      parameters:
+        - name: userNo
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with user details according to userNo
+
+    delete:
+      description: Delete User details by UserNo
+      tags:
+        - users
+      parameters:
+        - name: userNo
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with user details according to userNo
+          
+definitions:
+  users:
+    description: new user object
+    properties:
+      userNo: 
+        type: string
+      name:
+        type: string
+      address:
+        type: array
+        items:
+          type: object
+          properties:
+            no:
+              type: number
+            road:
+              type: string
+            city:
+              type: string
+      email:
+        type: string
+      username:
+        type: string
+      password:
+        type: string
+      imageUrl:
+        type: string
+    required:
+      - userNo
+      - name
+      - address
+      - email
+      - username
+      - password
+      - imageUrl
