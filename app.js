@@ -25,6 +25,9 @@ const UserManageRouter = require("./src/routes/userManage");
 //Add Middleware Path
 const logger = require("./src/middlewares/logger");
 
+//AWS S3 Server
+const imageServerRoute = require("./src/aws/ImageServer");
+
 // Add Middlewares
 app.use(cors());
 app.use(express.json());
@@ -35,6 +38,7 @@ app.use("/api/foods", foodItemRouter);
 app.use("/api/orders", MyOrderRouter);
 app.use("/api/orders/items", MyOrderItemRouter);
 app.use("/api/users", UserManageRouter);
+app.use("/api/s3Server", imageServerRoute);
 
 const swaggerDefinition = {
   info: {
@@ -54,6 +58,7 @@ const options = {
 const swaggerSpec = swaggerJsDoc(options);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
+app.use("/api/s3Server", imageServerRoute);
 // Check runing port
 app.listen(PORT, () => {
   console.log(`Successfully runing on Port : ${PORT}`);
