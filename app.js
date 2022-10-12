@@ -22,6 +22,10 @@ const MyOrderItemRouter = require("./src/routes/orderItem");
 //Add Middleware Path
 const logger = require("./src/middlewares/logger");
 
+//AWS S3 Server
+const imageServerRoute = require("./src/aws/ImageServer");
+//const imageServerRoute = require("./src/aws/AddOutlet");
+
 // Add Middlewares
 app.use(cors());
 app.use(express.json());
@@ -31,6 +35,7 @@ app.use("/api/favorites", favFoodOutletRouter);
 app.use("/api/foods", foodItemRouter);
 app.use("/api/my_orders", MyOrderRouter);
 app.use("/api/my_order_items", MyOrderItemRouter);
+app.use("/api/s3Server", imageServerRoute);
 // Check runing port
 app.listen(PORT, () => {
   console.log(`Successfully runing on Port : ${PORT}`);
