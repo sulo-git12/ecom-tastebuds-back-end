@@ -1,0 +1,66 @@
+paths:
+  /api/favorites:
+    post:
+      description: Insert favorite food outlet detail
+      tags:
+        - favorite food outlet
+      parameters:
+        - name: favorite food outlet
+          in: body
+          description: favorite food outlet object
+          required: true
+          schema:
+            $ref: "#/definitions/favorite_food_outlet"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with favorite food outlet details
+
+  /api/favorites/{userId}:
+    get:
+      description: Get favorite food outlets details by user id
+      tags:
+        - favorite food outlet
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with favorite food outlets details according to userID
+
+  /api/favorites/{userId}/{outletId}:
+      delete:
+        description: favorite food outlet by userId & outletId
+        tags:
+          - favorite food outlet
+        parameters:
+          - name: userId
+            in: path
+            required: true
+            type: string
+          - name: outletId
+            in: path
+            required: true
+            type: string 
+        produces:
+          - application/json
+        responses:
+          200:
+            description: ========
+
+definitions:
+  favorite_food_outlet:
+    description: An object with favorite food outlet by userId & outletId
+    properties:
+      userId:
+        type: string
+      foodOutletId:
+        type: string
+    required:
+      - userId
+      - foodOutletId

@@ -1,0 +1,61 @@
+paths:
+  /api/orders/items:
+    post:
+      description: place a new order item
+      tags:
+        - Order Item
+      parameters:
+        - name: Order Item
+          in: body
+          description: Order Item object
+          required: true
+          schema:
+            $ref: "#/definitions/OrderItem"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with Order item details
+
+  /api/orders/items/{orderId}:
+    get:
+      description: Get order items according to userID
+      tags:
+        - Order Item
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An object with order details according to userID
+          
+definitions:
+  OrderItem:
+    description: new order item object
+    properties:
+      orderNo: 
+        type: string
+      itmeId:
+        type: string
+      price:
+        type: number
+      qty:
+        type: number
+      grossAmount:
+        type: number
+      discountAmount:
+        type: number
+      netAmount:
+        type: number
+    required:
+      - orderNo
+      - itmeId
+      - price
+      - qty
+      - grossAmount
+      - discountAmount
+      - netAmount
