@@ -18,6 +18,7 @@ const foodItemRouter = require("./src/routes/foodItem");
 const favFoodOutletRouter = require("./src/routes/favFoodOutlet");
 const MyOrderRouter = require("./src/routes/order");
 const MyOrderItemRouter = require("./src/routes/orderItem");
+const DetailCountRouter = require("./src/routes/detailsCount");
 
 //Add Middleware Path
 const logger = require("./src/middlewares/logger");
@@ -31,6 +32,7 @@ app.use("/api/favorites", favFoodOutletRouter);
 app.use("/api/foods", foodItemRouter);
 app.use("/api/my_orders", MyOrderRouter);
 app.use("/api/my_order_items", MyOrderItemRouter);
+app.use("/api/detailscount", DetailCountRouter);
 // Check runing port
 app.listen(PORT, () => {
   console.log(`Successfully runing on Port : ${PORT}`);

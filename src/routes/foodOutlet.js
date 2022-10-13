@@ -31,9 +31,10 @@ foodOutletRouter.post("/", async (req, res) => {
     });
 
     const newFoodOutlet = await foodOutlet.save();
-    res.status(200).send(newFoodOutlet);
+    res.status(200).send("Successfully Inserted!");
+    // res.status(200).send(newFoodOutlet);
   } catch (err) {
-    return res.status(500).send(`Error: ${err.message}`);
+    return res.status(500).send(err.errors);
   }
 });
 
@@ -42,6 +43,16 @@ foodOutletRouter.get("/", async (req, res) => {
   try {
     let foodOutlets = await foodOutletModel.find();
 
+    res.status(200).send(foodOutlets);
+  } catch (err) {
+    return res.status(500).send(`Error: ${err.message}`);
+  }
+});
+
+// Get all food outlets Count
+foodOutletRouter.get("/", async (req, res) => {
+  try {
+    let foodOutlets = await foodOutletModel.estimatedDocumentCount();
     res.status(200).send(foodOutlets);
   } catch (err) {
     return res.status(500).send(`Error: ${err.message}`);
@@ -90,36 +101,20 @@ foodOutletRouter.put("/:outletId", async (req, res) => {
         foodOutlet.name = req.body.name;
         c++;
       }
-      if (foodOutlet.address.no != req.body.address.no) {
-        foodOutlet.address.no = req.body.address.no;
+      if (foodOutlet.description != req.body.description) {
+        foodOutlet.description = req.body.description;
         c++;
       }
-      if (foodOutlet.address.street != req.body.address.street) {
-        foodOutlet.address.street = req.body.address.street;
+      if (foodOutlet.imageUrl != req.body.imageUrl) {
+        foodOutlet.imageUrl = req.body.imageUrl;
         c++;
       }
-      if (foodOutlet.address.city != req.body.address.city) {
-        foodOutlet.address.city = req.body.address.city;
-        c++;
-      }
-      if (foodOutlet.location.latitude != req.body.location.latitude) {
-        foodOutlet.location.latitude = req.body.location.latitude;
-        c++;
-      }
-      if (foodOutlet.location.longitude != req.body.location.longitude) {
-        foodOutlet.location.longitude = req.body.location.longitude;
-        c++;
-      }
-      if (foodOutlet.rating != req.body.rating) {
-        foodOutlet.rating = req.body.rating;
+      if (foodOutlet.email != req.body.email) {
+        foodOutlet.email = req.body.email;
         c++;
       }
       if (foodOutlet.contactNo != req.body.contactNo) {
         foodOutlet.contactNo = req.body.contactNo;
-        c++;
-      }
-      if (foodOutlet.isActive != req.body.isActive) {
-        foodOutlet.isActive = req.body.isActive;
         c++;
       }
       if (c > 0) {
