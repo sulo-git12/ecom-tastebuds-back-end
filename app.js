@@ -37,6 +37,8 @@ app.use("/api/foods", foodItemRouter);
 app.use("/api/favorites", favFoodOutletRouter);
 app.use("/api/orders", MyOrderRouter);
 app.use("/api/orders/items", MyOrderItemRouter);
+app.use("/api/users", UserManageRouter);
+app.use("/api/s3Server", imageServerRoute);
 
 // Check runing port
 app.listen(PORT, () => {
