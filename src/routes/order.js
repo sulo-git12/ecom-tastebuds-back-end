@@ -2,7 +2,7 @@ const express = require("express");
 const orderRouter = express.Router();
 const orderModel = require("../models/order");
 
-// Insert data
+// Insert order data to database
 orderRouter.post("/", async (req, res) => {
   try {
     const order = new orderModel({
@@ -70,7 +70,26 @@ orderRouter.get("/:userId", async (req, res) => {
   }
 });
 
-//Delete data
+//Get last order id
+orderRouter.get("/", async (req, res) => {
+  try {
+    let orderId = await orderModel
+      .find({}, { _id: 0, orderId: 1 })
+      .sort({ orderId: -1 })
+      .limit(1);
+
+    if (!orderId) {
+      orderId = 0;
+      res.status(200).send(orderId);
+    }
+
+    res.status(200).send(orderId);
+  } catch (err) {
+    return res.status(500).send(`Error: ${err.message}`);
+  }
+});
+
+//Delete order data
 orderRouter.delete("/:orderId", async (req, res) => {
   let order = await orderModel.findOneAndDelete({
     orderId: req.params.orderId,

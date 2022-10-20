@@ -45,6 +45,6 @@ const foodOutletSchema = new mongoose.Schema({
 });
 
 // Create an instance of model Outlet
-const Outlet = mongoose.model("food_outlet", foodOutletSchema);
+const FoodOutlet = mongoose.model("food_outlet", foodOutletSchema);
 
-module.exports = Outlet;
+module.exports = FoodOutlet;

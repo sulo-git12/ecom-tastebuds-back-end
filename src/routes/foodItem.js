@@ -34,6 +34,27 @@ foodItemRouter.get("/:foodId", async (req, res) => {
   }
 });
 
+//Get food items by outlet Id
+foodItemRouter.get("/store/:outeltId", async (req, res) => {
+  try {
+    let food = await foodItemModel.find({
+      outletNo: req.params.outeltId,
+    });
+
+    if (!food) {
+      let errorObj = {
+        message: "The given food Id does not exist",
+        statusCode: "NOT FOUND",
+      };
+      return res.status(404).send(errorObj);
+    }
+
+    res.status(200).send(food);
+  } catch (ex) {
+    return res.status(500).send(ex.message);
+  }
+});
+
 //Insert food item
 foodItemRouter.post("/", async (req, res) => {
   try {
@@ -103,6 +124,7 @@ foodItemRouter.put("/:foodId", async (req, res) => {
     return res.status(500).send(`Error: ${ex.message}`);
   }
 });
+
 // Delete food item details by item Id
 foodItemRouter.delete("/:foodId", async (req, res) => {
   let food = await foodItemModel.findOne({
