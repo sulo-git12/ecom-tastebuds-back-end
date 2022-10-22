@@ -28,17 +28,6 @@ const logger = require("./src/middlewares/logger");
 //AWS S3 Server
 const imageServerRoute = require("./src/aws/ImageServer");
 
-// Add Middlewares
-app.use(cors());
-app.use(express.json());
-app.use(logger);
-app.use("/api/outlets", foodOutletRouter);
-app.use("/api/foods", foodItemRouter);
-app.use("/api/orders", MyOrderRouter);
-app.use("/api/orders/items", MyOrderItemRouter);
-app.use("/api/users", UserManageRouter);
-app.use("/api/s3Server", imageServerRoute);
-
 // swagger
 const swaggerDefinition = {
   info: {
